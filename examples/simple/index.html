@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title>Flowplayer IMA - Simple</title>
+    <meta name="description" content="test">
+    <link rel="stylesheet" type="text/css" href="//releases.flowplayer.org/6.0.3/skin/functional.css" />
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="//releases.flowplayer.org/6.0.3/flowplayer.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+<body>
+<div id="mainContainer">
+    <div id="content" class="player">
+        <video id="contentElement">
+            <source type="video/mp4" src="//rmcdn.2mdn.net/Demo/vast_inspector/android.mp4">
+        </video>
+    </div>
+</div>
+
+<script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+<script type="text/javascript" src="../../src/flowplayer.ima.js"></script>
+
+<script>
+    $(function(){
+        var angConf = {
+            videoContent: "#content",
+            ads: [
+                {
+                    type: "preroll",
+                    adTagUrl: "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator="
+                },
+                {
+                    type: "overlay",
+                    adTagUrl: "http://pubads.g.doubleclick.net/gampad/ads?sz=480x70&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dnonlinear&correlator="
+                },
+                {
+                    type: "midroll",
+                    adTagUrl: "http://pubads.g.doubleclick.net/gampad/ads?slotname=/124319096/external/ad_rule_samples&sz=640x480&ciu_szs=300x250&unviewed_position_start=1&output=xml_vast3&impl=s&env=vp&gdfp_req=1&ad_rule=0&vad_type=linear&vpos=midroll&pod=2&mridx=1&ppos=1&lip=true&min_ad_duration=0&max_ad_duration=30000&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&url=&video_doc_id=short_onecue&cmsid=496"
+                },
+                {
+                    type: "postroll",
+                    adTagUrl: "http://pubads.g.doubleclick.net/gampad/ads?slotname=/124319096/external/ad_rule_samples&sz=640x480&ciu_szs=300x250&unviewed_position_start=1&output=xml_vast3&impl=s&env=vp&gdfp_req=1&ad_rule=0&vad_type=linear&vpos=postroll&pod=3&ppos=1&lip=true&min_ad_duration=0&max_ad_duration=30000&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&url=&video_doc_id=short_onecue&cmsid=496"
+                }
+            ]
+        };
+
+        angVideo(angConf);
+    });
+</script>
+
+</body>
+</html>

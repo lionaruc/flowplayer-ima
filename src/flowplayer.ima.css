@@ -1,0 +1,22 @@
+#mainContainer {
+    position: relative;
+    width: 640px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#content {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flowplayer {
+    /* fonts for UI widgets */
+    font-family: "myriad pro", tahoma, verdana, arial, sans-serif;
+}
